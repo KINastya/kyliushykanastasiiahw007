@@ -1,0 +1,146 @@
+/* HEADER */
+
+.header {
+    background-color: rgba(0, 0, 0, 0.458);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.header,
+.logo,
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    width: 20%;
+}
+
+.logo__picture-wrap {
+    width: 50%;
+}
+
+.logo__picture {
+    width: 100%;
+    min-width: 50%;
+}
+
+.logo__title {
+    font-family: 'Rubik Glitch', cursive;
+}
+
+.menu-wrap {
+    width: 60%;
+}
+
+.menu__item,
+.submenu__drobdown {
+    position: relative;
+}
+
+.menu__link,
+.submenu__link,
+.submenu__drobdown--spesial,
+.submenu__link--spesial {
+    white-space: nowrap;
+    display: inline-block;
+    padding: 5%;
+    z-index: 1;
+    transition: 2s;
+    font-family: 'Rubik Glitch', cursive;
+}
+
+.menu__link,
+.submenu__link {
+    background-color: rgb(118, 156, 253);
+}
+
+.submenu__link--spesial {
+    background-color: darkblue;
+}
+
+.menu__link:hover{
+background-color: rgb(216, 209, 215);
+}
+
+.menu__item:hover .submenu,
+.submenu__drobdown:hover .submenu__list {
+    display: block;
+}
+
+.submenu,
+.submenu__list {
+    display: none;
+    position: absolute;
+}
+
+/* SECTION */
+
+.section {
+    margin-top: 10%;
+}
+
+[class$="title"] {
+    text-align: center;
+    padding: 1% 2% ;
+}
+
+[class$="item"] {
+    color: rgb(45, 47, 47);
+}
+
+p[class$="item"] {
+    padding: 1% 2%;
+    text-indent: 5%;
+}
+
+p::first-letter {
+    font-weight: bold;
+    font-size: 2rem;
+    color: black;
+}
+
+.text__item {
+    display: none;
+}
+
+
+/* SECTION */
+
+.section {
+    margin-top: 10%;
+}
+
+[class$="title"] {
+    text-align: center;
+    padding: 1% 2% ;
+}
+
+[class$="item"] {
+    color: rgb(45, 47, 47);
+}
+
+p[class$="item"] {
+    padding: 1% 2%;
+    text-indent: 5%;
+}
+
+p::first-letter {
+    font-weight: bold;
+    font-size: 2rem;
+    color: black;
+}
+
+.text__item {
+    display: none;
+}
+
+.article__title,
+.article__item {
+    font-family: 'Syne Mono', monospace;
+}
