@@ -1,146 +1,106 @@
 /* HEADER */
-
 .header {
-    background-color: rgba(0, 0, 0, 0.458);
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
+    background-color: rgba(0, 0, 0, 0.458);/* задаем цвет для апки сайта */
+    position: fixed;/* задаем так же позицию - фиусированую */
+    top: 0;/* убераем отступы сверху */
+    right: 0;/* убераем оступы справа */
+    left: 0;/* убераем отступы слева */
 }
 
 .header,
 .logo,
 .menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    display: flex;/* для меню, логотипа, и всей шапки задем обтикание текста */
+    flex-direction: row;/* размещене внутрених елементов в ряд */
+    justify-content: space-around;/* размещене всех елементов с одинаковыми отспутами друг от друг */
+    align-items: center;/* размещение всех элементов по центру */
 }
 
 .logo {
-    width: 20%;
+    width: 20%;/* задаем для лого, в котором заголовок первого уовня и картинка логотип шширину в 20% */
 }
 
 .logo__picture-wrap {
-    width: 50%;
+    width: 50%;/* для самой картинки в лого задаем ирину в 50% */
 }
 
 .logo__picture {
-    width: 100%;
-    min-width: 50%;
+    width: 100%;/* так же для картинки задаем шиинув 100%, что бы она занимала все место которое ей было выделено */
+    min-width: 50%;/* задаем так же минимальную ширину, что бы при сужении браузера картинка сужалась максимум на 50%  */
 }
 
 .logo__title {
-    font-family: 'Rubik Glitch', cursive;
+    font-family: 'Rubik Glitch', cursive;/* для заголовка первого уровня добавляем стиль шрифта */
 }
 
 .menu-wrap {
-    width: 60%;
+    width: 60%;/* для меню задаем ширину в 60%, что бы она занимал все оставшееся место после заголовка */
 }
 
 .menu__item,
 .submenu__drobdown {
-    position: relative;
+    position: relative;/*задаем для текста в меню и второго выпадающего списка относительное позиционирование. Свойства top и bottom определяют смещение по вертикали от его нормального положения, свойства left и right задают горизонтальное смещение. */
 }
 
 .menu__link,
 .submenu__link,
 .submenu__drobdown--spesial,
 .submenu__link--spesial {
-    white-space: nowrap;
-    display: inline-block;
-    padding: 5%;
-    z-index: 1;
-    transition: 2s;
-    font-family: 'Rubik Glitch', cursive;
+    white-space: nowrap;/* для ссылок в главном меню и всех эго елементах с сылками задаем значение что бы текст был без переноса */
+    display: inline-block;/*  отображеем элементы списка по горизонтали, а не по вертикали. */
+    padding: 5%;/* задаем внутрение отступы в 5% */
+    z-index: 1;/* задаем зет индекс, чо обозначает что элемент выше чем другые элементы при наслаивании */
+    font-family: 'Rubik Glitch', cursive;/* задаем стиль шрифту */
 }
 
 .menu__link,
 .submenu__link {
-    background-color: rgb(118, 156, 253);
+    background-color: rgb(118, 156, 253);/* задаем для елементов внутри меню спецыальный фоновы цвет */
 }
 
 .submenu__link--spesial {
-    background-color: darkblue;
-}
-
-.menu__link:hover{
-background-color: rgb(216, 209, 215);
+    background-color: darkblue;/* для элемента который выпадаем в выпадающем меню, что бы его выделеть задаем двугой фоновый цвет */
 }
 
 .menu__item:hover .submenu,
 .submenu__drobdown:hover .submenu__list {
-    display: block;
+    display: block;/* для того что бы елемнеты которые были скрыты, что бы при наведении они отображались */
 }
 
 .submenu,
 .submenu__list {
-    display: none;
-    position: absolute;
+    display: none;/* а теперь скрываем элементы */
+    position: absolute;/* содержащие блоки являются предками, относительно которых расположены элементы.) */
 }
 
 /* SECTION */
 
 .section {
-    margin-top: 10%;
+    margin-top: 10%;/* для того, что бы были вверхний отступ */
 }
 
 [class$="title"] {
-    text-align: center;
-    padding: 1% 2% ;
+    text-align: center;/* для всех елементов которые находятся в section и заканчиваются на title располагались по центру */
+    padding: 1% 2% ;/* так же что бы они имел внутринее отступы */
 }
 
 [class$="item"] {
-    color: rgb(45, 47, 47);
+    color: rgb(45, 47, 47);/* для всех элементов которые находятся в section и заканчиваются на item меняем цвет рифта на серый  */
 }
 
 p[class$="item"] {
-    padding: 1% 2%;
-    text-indent: 5%;
+    padding: 1% 2%;/* для всех параграфов которые находятся в section и заканчиваются на item задаем внутрение отступы */
+    text-indent: 5%;/* для всех параграфов которые находятся в section и заканчиваются на item  добавяем отступ первой стоки в каждом элементе*/
 }
 
 p::first-letter {
-    font-weight: bold;
-    font-size: 2rem;
-    color: black;
-}
-
-.text__item {
-    display: none;
-}
-
-
-/* SECTION */
-
-.section {
-    margin-top: 10%;
-}
-
-[class$="title"] {
-    text-align: center;
-    padding: 1% 2% ;
-}
-
-[class$="item"] {
-    color: rgb(45, 47, 47);
-}
-
-p[class$="item"] {
-    padding: 1% 2%;
-    text-indent: 5%;
-}
-
-p::first-letter {
-    font-weight: bold;
-    font-size: 2rem;
-    color: black;
-}
-
-.text__item {
-    display: none;
+    font-weight: bold;/* для первой буквы в каждом параграфе задаем стилизацию шрифта жирный */
+    font-size: 2rem;/* так же задаем размер в два раза больше */
+    color: black;/* и черный цвет */
 }
 
 .article__title,
-.article__item {
-    font-family: 'Syne Mono', monospace;
+.article__item,
+.section__title {
+    font-family: 'Syne Mono', monospace;/* для всех параграфов и их заголовков задаем специальную стилизацию шрифта */
 }
