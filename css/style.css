@@ -1,6 +1,5 @@
 /* HEADER */
 .header {
-    background-color: rgba(0, 0, 0, 0.458);/* задаем цвет для апки сайта */
     position: fixed;/* задаем так же позицию - фиусированую */
     top: 0;/* убераем отступы сверху */
     right: 0;/* убераем оступы справа */
@@ -21,7 +20,7 @@
 }
 
 .logo__picture-wrap {
-    width: 50%;/* для самой картинки в лого задаем ирину в 50% */
+    width: 29%;/* для самой картинки в лого задаем ирину в 50% */
 }
 
 .logo__picture {
@@ -34,43 +33,74 @@
 }
 
 .menu-wrap {
-    width: 60%;/* для меню задаем ширину в 60%, что бы она занимал все оставшееся место после заголовка */
+    width: 100%;/* для меню задаем ширину в 60%, что бы она занимал все оставшееся место после заголовка */
+    background-color: rgb(51, 51, 51);/* задаем цвет для апки сайта */
+    margin: 0 auto;
+    padding: 2%;
+    border-bottom: 5px solid rgb(0, 158, 225);
+}
+
+.menu__link {
+    color: rgb(180, 180, 180);
+}
+
+.menu__link--spesial:hover {
+    color: white;
 }
 
 .menu__item,
-.submenu__drobdown {
+.sub__item {
     position: relative;/*задаем для текста в меню и второго выпадающего списка относительное позиционирование. Свойства top и bottom определяют смещение по вертикали от его нормального положения, свойства left и right задают горизонтальное смещение. */
 }
 
 .menu__link,
 .submenu__link,
-.submenu__drobdown--spesial,
+.sub__link,
 .submenu__link--spesial {
     white-space: nowrap;/* для ссылок в главном меню и всех эго елементах с сылками задаем значение что бы текст был без переноса */
     display: inline-block;/*  отображеем элементы списка по горизонтали, а не по вертикали. */
     padding: 5%;/* задаем внутрение отступы в 5% */
     z-index: 1;/* задаем зет индекс, чо обозначает что элемент выше чем другые элементы при наслаивании */
     font-family: 'Rubik Glitch', cursive;/* задаем стиль шрифту */
+    color: white;
 }
 
-.menu__link,
-.submenu__link {
-    background-color: rgb(118, 156, 253);/* задаем для елементов внутри меню спецыальный фоновы цвет */
-}
-
-.submenu__link--spesial {
-    background-color: darkblue;/* для элемента который выпадаем в выпадающем меню, что бы его выделеть задаем двугой фоновый цвет */
+.menu__link {
+    display: block;
+    width: 150px;
+    padding: 10%;
 }
 
 .menu__item:hover .submenu,
-.submenu__drobdown:hover .submenu__list {
+.sub__item:hover .submenu__list {
     display: block;/* для того что бы елемнеты которые были скрыты, что бы при наведении они отображались */
+}
+
+.menu__item--spesial:hover {
+    background-color:rgb(0, 158, 225);
 }
 
 .submenu,
 .submenu__list {
     display: none;/* а теперь скрываем элементы */
     position: absolute;/* содержащие блоки являются предками, относительно которых расположены элементы.) */
+    background-color:rgb(0, 158, 225);
+    padding: 10%;
+}
+
+.submenu,
+.submenu__list {
+    outline: 1px solid rgb(17, 81, 109);
+}
+
+.submenu__list {
+    top: -11px;
+    left: 136px;
+}
+
+.submenu__item,
+.submenu__item--spesial {
+    width: 120px;
 }
 
 /* SECTION */
